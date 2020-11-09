@@ -26,6 +26,7 @@ main {
 .letter {
     position: absolute;
     animation: animate 5s linear infinite;
+    cursor: default;
 }
 
 @keyframes animate {
