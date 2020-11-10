@@ -159,6 +159,25 @@ main {
     display: flex;
 }
 
+.toggle-animation {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    z-index: 3;
+}
+
+#animation-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #222;
+    z-index: 2;
+}
+
 #winning-message {
     color: #fff;
     margin-bottom: 20px;

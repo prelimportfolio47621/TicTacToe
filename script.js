@@ -1,6 +1,9 @@
 //Background and animation
 
 const main = document.querySelector('.main');
+const toggleBtn = document.querySelector('.toggle-animation');
+const animationMask = document.getElementById('animation-mask');
+let animationOn = true;
 
 const colors = [
     '2196f3',
@@ -31,7 +34,28 @@ function createLetters() {
     }, 5000);
 }
 
-setInterval(createLetters, 150);
+let intervalID;
+
+function startAnimation() {
+    intervalID = setInterval(createLetters, 150);
+    animationMask.style.visibility = 'hidden';
+    toggleBtn.innerHTML = 'Disable Animation';
+}
+
+function disableAnimation() {
+    clearInterval(intervalID);
+    animationMask.style.visibility = 'visible';
+    toggleBtn.innerHTML = 'Turn On Animation';
+}
+
+function toggleAnimation() {
+    animationOn ? disableAnimation() : startAnimation();
+    animationOn = !animationOn;
+}
+
+toggleBtn.addEventListener('click', toggleAnimation);
+
+startAnimation();
 
 
 //Game logic
