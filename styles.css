@@ -20,7 +20,6 @@ main {
     align-items: center;
     height: 100vh;
     width: 100%;
-    position: relative;
 }
 
 .title-heading {
@@ -35,9 +34,17 @@ main {
 }
 
 .title-heading span {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: translateY(-40px);
     color: #fff;
     font-size: 50px;
+    font-weight: 700;
+    opacity: 0;
     animation: title-animate 0.5s;
+    animation-delay: calc(var(--i) * 0.15s);
+    animation-fill-mode: forwards;
 }
 
 .letter {
@@ -69,7 +76,12 @@ main {
 @keyframes title-animate {
     0% {
         opacity: 0;
-        t
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
