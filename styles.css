@@ -34,7 +34,6 @@ main {
 }
 
 .title-heading span {
-    display: inline-block;
     position: relative;
     margin: 0;
     transform: translateY(-40px);
