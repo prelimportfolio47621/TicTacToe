@@ -34,7 +34,7 @@ main {
 }
 
 .title-heading span {
-    position: relative;
+    /* position: relative; */
     margin: 0;
     transform: translateY(-40px);
     color: #fff;
