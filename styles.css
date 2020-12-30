@@ -30,20 +30,23 @@ main {
                 0 0 45px #000,
                 0 0 60px #000;
     position: absolute;
-    top: 20px;
+    top: 40px;
+    z-index: 3;
+}
+
+.title-heading span {
     color: #fff;
     font-size: 50px;
-    text-transform: uppercase;
-    z-index: 3
+    animation: title-animate 0.5s;
 }
 
 .letter {
     position: absolute;
-    animation: animate 5s linear infinite;
+    animation: bg-animate 5s linear infinite;
     cursor: default;
 }
 
-@keyframes animate {
+@keyframes bg-animate {
     0% {
         opacity: 0;
         transform: translateY(0) rotate(0deg);
@@ -60,6 +63,13 @@ main {
     100% {
         opacity: 0;
         transform: translateY(-500%) rotate(360deg);
+    }
+}
+
+@keyframes title-animate {
+    0% {
+        opacity: 0;
+        t
     }
 }
 
